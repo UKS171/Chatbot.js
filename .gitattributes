@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+function getChatbotAnswer() {
+  const userQuestion = document.getElementById("userInput").value;
+  const responseArea = document.getElementById("chatbotResponse");
+  if (userQuestion.includes("Hello")) {
+    answer = "Hi there! How can I help you today?";
+  } else if (userQuestion.includes("name")) {
+    answer = "I'm your friendly chatbot!";
+  } else if (userQuestion == "") {
+    answer = "Please type something to ask.";
+  } else {
+    answer = "Sorry, I don't understand that yet.";
+  }
+  responseArea.innerText = "Chatbot says: " + answer;
+  return answer;
+}
